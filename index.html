@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <meta name="description" content="Market Pulse demo for collecting comparable local service estimates.">
+  <title>Market Pulse — Local service research</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Market Pulse home"><span class="brand-mark">MP</span><span>Market Pulse<small>INTELLIGENT INSTALLATIONS</small></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="workspace"><span class="workspace-dot"></span> Demo workspace <span class="chevron">⌄</span></button>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span> Overview</button>
+        <button class="nav-item" data-view="profile"><span class="nav-icon">▧</span> Job profile</button>
+        <button class="nav-item" data-view="businesses"><span class="nav-icon">⌖</span> Businesses <span class="nav-count">24</span></button>
+        <button class="nav-item" data-view="outreach"><span class="nav-icon">✉</span> Outreach <span class="nav-count">8</span></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="connection"><span class="status-dot"></span><span><b>Demo mode</b><small>No emails are sent</small></span></div><button class="profile-button"><span class="avatar">JM</span><span>Jamie Morgan<small>Project owner</small></span><span class="more">···</span></button></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">Projects <span>/</span> <b>Market Pulse</b></div><div class="top-actions"><button class="icon-button" aria-label="Help">?</button><button class="avatar mini">JM</button></div></header>
+
+      <section class="view active-view" id="view-overview">
+        <div class="page-heading"><div><div class="eyebrow">QUARTERLY PRICE CHECK <span class="tag">DEMO DATA</span></div><h1>Lawn mowing</h1><p class="subhead">Compare estimates for the same residential job across Sydney.</p></div><button class="primary-button" id="new-campaign">＋ New campaign</button></div>
+        <div class="campaign-bar"><div class="campaign-select"><span class="tiny-icon">◷</span><span><b>Spring 2026</b><small>Fortnightly lawn mowing · Greater Sydney test</small></span><span class="chevron">⌄</span></div><div class="campaign-meta"><span><i class="status-dot"></i> Gathering replies</span><span>Updated 2 hours ago</span></div></div>
+
+        <div class="stat-grid"><article class="stat-card"><div class="stat-label">BUSINESSES FOUND <span class="info">i</span></div><div class="stat-value">24</div><div class="stat-foot">Across 3 selected suburbs</div></article><article class="stat-card"><div class="stat-label">ENQUIRIES SENT <span class="info">i</span></div><div class="stat-value">18 <span class="small-total">/ 24</span></div><div class="stat-foot"><span class="orange-dot"></span> 6 awaiting review</div></article><article class="stat-card"><div class="stat-label">ESTIMATES RECEIVED <span class="info">i</span></div><div class="stat-value">8</div><div class="stat-foot">44% response rate</div></article><article class="stat-card"><div class="stat-label">MEDIAN ESTIMATE <span class="info">i</span></div><div class="stat-value">$68<span class="per-visit">/visit</span></div><div class="stat-foot">From 8 comparable replies</div></article></div>
+
+        <div class="content-grid">
+          <section class="panel results-panel"><div class="panel-heading"><div><h2>Provider responses</h2><p>Indicative prices linked to the original replies.</p></div><button class="text-button" data-view="businesses">View all <span>↗</span></button></div><div class="table-wrap"><table><thead><tr><th>BUSINESS</th><th>SUBURB</th><th>ESTIMATE</th><th>REPLY</th><th></th></tr></thead><tbody id="response-rows"></tbody></table></div><div class="panel-foot"><span>Showing 5 of 24 businesses</span><button class="text-button" data-view="businesses">Open discovery table →</button></div></section>
+          <section class="panel area-panel"><div class="panel-heading"><div><h2>Area coverage</h2><p>Search progress by suburb</p></div><button class="icon-button subtle" aria-label="Area options">···</button></div><div class="map-card"><div class="map-stamp">SYDNEY · NSW</div><svg class="map-art" viewBox="0 0 460 255" role="img" aria-label="Illustrative Sydney suburb map showing Marrickville, Dulwich Hill and Newtown"><path class="water" d="M0 0h460v65c-27 4-30 34-55 39-23 4-28-8-51 4-21 10-25 33-49 36-32 4-42-14-67 3-18 12-12 28-31 39-20 12-44 6-61 20-15 12-14 31-28 49H0z"/><path class="road" d="M35 231 117 0M152 255 218 0M265 255 288 0M360 255 395 0M0 88 457 171M0 192 460 114M39 255 438 0"/><path class="boundary" d="m72 58 108-29 29 78-96 47-57-42zm128 69 95-23 43 78-107 30-42-44zm-97 53 93-34 37 77-81 25-59-29z"/><circle class="map-pin pin-1" cx="133" cy="104" r="8"/><circle class="map-pin pin-2" cx="260" cy="148" r="8"/><circle class="map-pin pin-3" cx="205" cy="206" r="8"/><text x="76" y="88">NEWTOWN</text><text x="215" y="131">MARRICKVILLE</text><text x="111" y="220">DULWICH HILL</text><text x="313" y="67">SYDNEY CBD</text></svg><div class="map-legend"><span><i class="legend-pin"></i> Suburb searched</span><span><i class="legend-ring"></i> Active test area</span></div></div><div class="coverage-list"><div><span class="coverage-name"><i class="coverage-check">✓</i> Marrickville</span><span>11 businesses</span><span class="coverage-progress"><i style="width:72%"></i></span></div><div><span class="coverage-name"><i class="coverage-check">✓</i> Newtown</span><span>8 businesses</span><span class="coverage-progress"><i style="width:54%"></i></span></div><div><span class="coverage-name"><i class="coverage-check pending">·</i> Dulwich Hill</span><span>5 businesses</span><span class="coverage-progress"><i style="width:34%"></i></span></div></div></section>
+        </div>
+        <section class="panel profile-strip"><img src="assets/residential-lawn-demo.png" alt="Illustrative residential backyard lawn with 12 metre by 15 metre dimensions"><div class="profile-summary"><div class="eyebrow">STANDARD JOB PROFILE</div><h2>Residential lawn · approx. 180 m²</h2><p>Overgrown grass · flat yard · side gate access · mow, edge and leave clippings in green bin.</p></div><button class="text-button" data-view="profile">View profile →</button></section>
+        <footer class="disclaimer">All businesses, prices and replies are fictional sample data for demonstration. The map boundary and coverage figures are illustrative.</footer>
+      </section>
+
+      <section class="view" id="view-profile">
+        <div class="page-heading"><div><div class="eyebrow">CAMPAIGN INPUT</div><h1>Job profile</h1><p class="subhead">A consistent job description makes estimates easier to compare.</p></div><button class="secondary-button" id="edit-profile">Edit profile</button></div>
+        <div class="profile-layout"><div class="profile-photo-card"><img src="assets/residential-lawn-demo.png" alt="Illustrative suburban backyard lawn annotated 12 metres by 15 metres"><div class="photo-caption">AI-generated reference image · dimensions are illustrative</div></div><div class="panel job-card"><div class="eyebrow">RESIDENTIAL · LAWN MOWING</div><h2>Fortnightly mow and tidy</h2><dl><div><dt>Measured area</dt><dd>Approx. 180 m² · 12 m × 15 m</dd></div><div><dt>Grass condition</dt><dd>Long and ready for a mow</dd></div><div><dt>Terrain</dt><dd>Mostly flat</dd></div><div><dt>Access</dt><dd>Side gate from the street</dd></div><div><dt>Scope</dt><dd>Mow, trim path edges, leave clippings in green bin</dd></div><div><dt>Frequency</dt><dd>Every two weeks during growing season</dd></div></dl><div class="variable-field"><span>SUBURB IN EACH ENQUIRY</span><code>{{suburb}}</code></div></div></div>
+        <section class="panel email-preview"><div class="panel-heading"><div><h2>Enquiry preview</h2><p>Demo sender: Jamie Taylor · mailbox configured separately</p></div><span class="tag">SIMULATED</span></div><div class="email-paper"><div class="email-subject">Subject: Could I get a mowing estimate for <b>Marrickville</b>?</div><p>Hi,</p><p>I’m looking for someone to mow the lawn at my place in Marrickville every couple of weeks during the growing season.</p><p>It’s roughly 180 m², mostly flat, and there’s side gate access. I’ve attached a photo and marked the area. I’d be after a mow, the edges tidied along the paths, and the clippings put in the green bin.</p><p>Could you let me know roughly what you’d charge per visit? Please include whether that covers edging and if there are any extra costs.</p><p>Thanks,<br>Jamie</p><div class="attachment">▧ &nbsp; lawn-profile-marrickville.jpg <small>3.7 MB</small></div></div><button class="secondary-button simulate-send" id="simulate-send">Simulate sending enquiry <span>→</span></button></section>
+      </section>
+
+      <section class="view" id="view-businesses">
+        <div class="page-heading"><div><div class="eyebrow">24 PROVIDERS · 3 SUBURBS</div><h1>Business discovery</h1><p class="subhead">A spreadsheet view of discovered providers and campaign responses.</p></div><button class="secondary-button" id="export-csv">↓ Export CSV</button></div>
+        <div class="toolbar"><label class="search-box">⌕ <input id="business-search" type="search" placeholder="Search business, suburb or status" aria-label="Search businesses"></label><select id="status-filter" aria-label="Filter by response"><option value="all">All responses</option><option value="Received">Estimate received</option><option value="Sent">Awaiting reply</option><option value="Review">Review before send</option></select><button class="secondary-button" id="add-business">＋ Add business</button></div>
+        <section class="panel table-panel"><div class="table-wrap"><table class="wide-table"><thead><tr><th>BUSINESS</th><th>EMAIL</th><th>SUBURBS SERVED</th><th>DISCOVERY SOURCE</th><th>ENQUIRY</th><th>ESTIMATE</th><th>REPLY EVIDENCE</th></tr></thead><tbody id="business-rows"></tbody></table></div><div class="panel-foot"><span>Demo records · prices are fictional</span><span id="business-count">24 businesses</span></div></section>
+        <div class="table-note"><span class="status-dot"></span> A business serving several suburbs appears once in the contact list. The enquiry suburb is recorded against each campaign request.</div>
+      </section>
+
+      <section class="view" id="view-outreach">
+        <div class="page-heading"><div><div class="eyebrow">CAMPAIGN ACTIVITY</div><h1>Outreach</h1><p class="subhead">Every enquiry, reply and follow-up stays linked to its provider.</p></div><button class="primary-button" id="new-enquiry">＋ New enquiry</button></div>
+        <div class="outreach-layout"><section class="panel activity-panel"><div class="panel-heading"><div><h2>Recent activity</h2><p>Spring 2026 · demo records</p></div><span class="tag">SIMULATED EMAIL</span></div><div id="activity-list" class="activity-list"></div></section><section class="panel send-panel"><div class="eyebrow">SEND PREVIEW</div><h2>Before an enquiry is sent</h2><ul><li>Business email is published and verified.</li><li>Business is not already contacted in this campaign.</li><li>Suburb and job profile are attached to the record.</li><li>Message is clear that this is a pricing research example.</li></ul><button class="secondary-button full-width" id="simulate-batch">Simulate next enquiry</button><p class="muted-small">Simulation only. No message leaves this demo.</p></section></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="modal"><form method="dialog" class="modal-card"><button class="modal-close" aria-label="Close">×</button><div id="modal-content"></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
