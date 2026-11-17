@@ -22,7 +22,7 @@ Market Pulse uses one consistent job profile to find local providers, request es
 
 > This is a front-end demonstration with fictional providers, prices and email replies. It does not send email or connect to business directories, Supabase, Outlook or AI services.
 
-![Market Pulse outreach screen](docs/assets/market-pulse-outreach.png)
+The interface follows the INTINS visual system: Space Grotesk, warm paper backgrounds, cyan and orange accents, square controls and thin dark rules.
 
 ## What you can explore
 
