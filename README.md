@@ -22,6 +22,8 @@ Market Pulse uses one consistent job profile to find local providers, request es
 
 > This is a front-end demonstration with fictional providers, prices and email replies. It does not send email or connect to business directories, Supabase, Outlook or AI services.
 
+![Market Pulse outreach screen](docs/assets/market-pulse-outreach.png)
+
 ## What you can explore
 
 - Review a standard residential lawn profile with an annotated reference photo.
@@ -67,6 +69,9 @@ A production system would need separate integrations for suburb boundaries and b
 │   ├── favicon.svg
 │   ├── residential-lawn-demo.png
 │   └── space-grotesk-medium.ttf
+├── docs/
+│   └── assets/
+│       └── market-pulse-outreach.png
 └── README.md
 ```
 
